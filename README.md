@@ -1,4 +1,4 @@
-# Daily-codes
+# Shivam Kumar Daily-codes
 Day to day code storage
 
 
@@ -6,7 +6,7 @@ Day to day code storage
 
 sudo apt-get install git
 
-2. 1. to check what have you changed:
+2. to check what have you changed:
 
 git status
 
@@ -31,6 +31,5 @@ git commit -m '15Feb codes'
 6. To push changes to github:
 
 git push origin master
-
 
 Short git video tutorial: https://www.youtube.com/watch?v=eL_0Ok_Gkas
