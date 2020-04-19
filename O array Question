@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float x[2],y[2],a=0,b=0,c=0,d=0,e=0,r;
+	int i;
+	printf("enter X and Y\n");
+	for(i=0;i<11;i++)
+	{
+		scanf("%f %f",&x[i],&y[i]);
+	}
+	for(i=0;i<11;i++)
+	{
+		a+=x[i];
+		b+=y[i];
+		c+=x[i]*y[i];
+		d+=x[i]*x[i];
+		e+=y[i]*y[i];
+	}
+	r=(c-a*b)/sqrt((2*d-pow(a,2))*(2*e-pow(b,2)));
+	printf("%f",r);
+	return 0;
+}
