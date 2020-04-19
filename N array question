@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float a[6],b[6],angle[6],c,area[6],x,y[6];
+	int i,j;
+	printf("enter two sides a and b with angle\n");
+	for(i=0;i<3;i++)
+	{
+		scanf("%f %f %f",&a[i],&b[i],&angle[i]);
+	}
+	for(i=0;i<3;i++)
+	{
+		x=sin(angle[i]*3.14/180);
+		area[i]=a[i]*b[i]*x/2;
+		y[i]=area[i];
+		printf("%f\n",area[i]);
+	} printf("End\n");
+	  for (i = 0; i < 3; ++i) 
+        {
+ 
+            for (j = i + 1; j < 3; ++j)
+            {
+ 
+                if (area[i] > area[j]) 
+                {
+ 
+                   c =  area[i];
+                    area[i] = area[j];
+                    area[j] = c;
+ 
+                }
+ 
+            }
+ 
+        }
+ 
+        printf("The numbers arranged in ascending order are given below \n");
+        for (i = 0; i < 3; ++i)
+            printf("%f\n", area[i]);
+        printf("the largest tringle is  ");
+        for(i=0;i<3;i++)
+        {
+        	if(y[i]==area[2])
+        	    printf("%d tringle",i+1);
+		}
+	return 0;
+}
