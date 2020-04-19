@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float x[20],y[20],a,b,z=0,c=0,d=0,e=0;
+	int i;
+	printf("enter x and y\n");
+	for(i=0;i<10;i++)
+	{
+		scanf("%f%f",&x[i],&y[i]);
+	}
+	for(i=0;i<10;i++)
+	{
+		z+=x[i];
+		c+=y[i];
+		d+=x[i]*x[i];
+		e+=x[i]*y[i];
+	}
+	printf("Z=%f  C=%f  D=%f  E=%f\n",z,c,d,e);
+	b=(2*e-z*c)/(2*d-pow(e,2));
+	a=c/2-b*z/2;
+	printf("A=%f  B=%f\n",a,b);
+	printf("Y=%d + %dX",a,b);
+	return 0;
+}
