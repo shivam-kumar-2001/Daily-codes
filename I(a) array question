@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int arr[10],rev[10],i,a;
+for(i=0;i<5;i++)
+{
+	  scanf("%d",&arr[i]);
+}
+
+for(i=0;i<5;i++)
+{
+	a=arr[i];
+	arr[i]=rev[4-i];
+	rev[4-i]=a;
+}
+for(i=0;i<5;i++)
+{
+	printf("%d\n",rev[i]);
+}
+
+return 0;	
+}
