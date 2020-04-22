@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a[3][3];
+	int row,col,j;
+	printf("Enter element in mateix in 3X3\n");
+	for(row=0;row<3;row++)
+	 {
+	 	for(col=0;col<3;col++)
+	 	  {
+	 	  	scanf("%d",&a[row][col]);
+		   }
+	 }
+	for(row=0;row<3;row++)
+	  {
+	  	for(col=0;col<3;col++)
+	  	  {
+	  	  	if(a[row][col]!=a[col][row]){
+				 j=4;break;
+				}
+	  	  	     
+	  	  	          
+	  	   else
+	  	  	      j=1;
+		}
+		    
+	  }
+	  if(j==1)
+	    printf("Symetric");
+	 else
+	    printf("NOT SYmetric");
+	return 0;
+}
