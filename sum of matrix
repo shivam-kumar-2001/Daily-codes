@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a[2],b[2],sum[2][2];
+	int row,col;
+	printf("enter 2X2 A matrix  ");
+     gets(&a);
+    printf("enter 2X2 B matrix  ");
+     gets(&b);
+	for(row=0;row<2;row++)
+	  {
+	  	for(col=0;col<2;col++)
+	  	  {
+	  	  	 sum[row][col]=a[row][col]+b[row][col];
+	  	  }
+	  }
+	for(row=0;row<2;row++)
+	  {
+	  	for(col=0;col<2;col++)
+	  	  {
+	  	  	 printf("%d",sum[row]p[col]);
+	  	  }
+	  }
+	return 0;
+}
