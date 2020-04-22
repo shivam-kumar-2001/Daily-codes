@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<ctype.h>
+int main()
+{
+	    char name[10];
+	    int i;
+     	printf("ENTER YR NAME\n");
+	for(i=0;i<6;i++)
+	 {
+	 	scanf("%c",&name[i]);
+	 }
+	 printf("UPPER CASE ");
+		for(i=0;i<6;i++)
+	 {
+	 printf("%c",toupper(name[i]));
+	 } printf("\n");
+      printf("LOWER CASE  ");
+      for(i=0;i<6;i++)
+	    {
+	 	printf("%c",tolower(name[i]));
+      }
+	 return 0;
+}
