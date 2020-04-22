@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int num[10],i,j,k=0,l=0,even[10],odd[10];
+	printf("enter number\n");
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&num[i]);
+	}
+	for(i=0;i<10;i++)
+	{
+		if(num[i]%2==0)
+		{
+			j=k;
+		  even[j]=num[i]; 
+		  k++;
+		}
+		else
+		   {
+		   	j=l;
+		   	odd[j]=num[i];
+		   	l++;
+		   }
+	
+	}
+	for(i=0;i<5;i++)
+     	printf("%d   %d\n",even[i],odd[i]);	
+	 return 0;
+}
