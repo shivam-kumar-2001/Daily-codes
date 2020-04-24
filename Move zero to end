@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int n,num[10],i,j=0;
+	printf("enter number size\n");
+	scanf("%d",&n);
+	printf("enter number\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&num[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		if(num[i]==0)
+		{
+			j++;
+		}
+		else
+		  printf("%d ",num[i]);
+	}
+	for(i=0;i<j;i++)
+	{
+		printf("%d ",0);
+	}
+	return 0;
+}
