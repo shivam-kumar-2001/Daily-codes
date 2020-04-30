@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int n,i=0,a,k=0;
+	scanf("%d",&n);
+	while(n!=0)
+	{
+		int a=n%10;
+		n /= 10;
+		k+=a;
+		i++;	
+	}
+	printf("%d",k);
+	return 0;
+}
