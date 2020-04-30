@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,i,k=0,g,s;
+	printf("enter range\n");
+	scanf("%d %d",&a,&b);
+	 g=(a>b)?a:b;
+	 s=(a<b)?a:b;
+	for(i=s+1;i<g;i++)
+	{
+	    k+=i;
+	}
+	printf("%d",k);
+	return 0;
+}
