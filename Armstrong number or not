@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i = 0,arr[10],number,k=0,j;
+	scanf("%d",&number);
+	int n=number;
+	while(number != 0)
+    {
+        arr[i] = number % 10;
+        number /= 10;
+        i++;
+    }
+	for(j=i-1;j>=0;j--)
+	{
+		k = k + arr[j]*arr[j]*arr[j];
+	 } printf("%d  %d\n",k,n);
+	if(k==n)
+	 {
+	 	printf("armstrong number");
+	 }
+	else
+	    printf(" not armstrong number ");
+	 return 0;
+}
