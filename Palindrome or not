@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+	int i;
+	char n[100];
+	gets(n);
+	int j=strlen(n);
+	for(i=0;i<j;i++)
+	{
+		if(n[i]!=n[j-i-1])
+		{
+			break;
+		}   
+	}
+	if(i>j/2)
+	   printf("palindrome");
+	else
+	   printf("not palindrome");
+	return 0;
+}
+
+
+
