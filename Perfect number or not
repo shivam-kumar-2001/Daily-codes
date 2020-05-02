@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+     int n,i,k=0;
+	 scanf("%d",&n);
+	 for(i=1;i<n;i++)
+	 {
+	      if(n%i==0)
+		  {
+		  	k+=i;
+		  	printf("%d\n",i);
+		  }	
+	 }	
+	 printf("sum of its positive divisors== %d",k);
+	 if(k==n)
+	 {
+	 	printf("\nPerfect number");
+	 }
+	 else
+	 {
+	 	printf("\nnot Perfect number");
+	 }
+	 return 0;
+}
