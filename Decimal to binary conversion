@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int n,arr[10],i=0,j,result=0,k=0;
+	scanf("%d",&n);
+	 while (n != 0 && n !=1)
+    {
+        arr[i] = n % 2;
+        n = n/2;
+        i++;
+    } arr[i]=n;
+    for(j=i;j>=0;j--)
+    {
+    	printf("%d",arr[j]);
+	}
+	return 0;
+}
