@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int result=0,i=0,a,n,b;
+	scanf("%d",&n);
+	 while (n != 0)
+    {
+        a = n % 10;
+        n = n/10;
+		result+=pow(8,i)*a;
+        i++;
+    }
+	printf("octal to decimal = %d\n",result);
+	printf("octal to binary = ");
+	 while (result != 0)
+    {
+        b = result % 2;
+        result = result/2;
+	    printf("%d",b);
+        i++;
+    }
+	return 0;
+}
