@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+	int n,b,x;
+	printf("enter year\n");
+	scanf("%d",&n);
+	printf("enter months in number\n");
+	scanf("%d",&x);
+	if(n%4==0)
+	{
+		if(n%100==0)
+		{
+			if(n%400==0)
+			   {
+			    	b=0;
+			   }
+			else
+			   b=1;
+		}
+		else
+		   b=0;
+	}
+	else 
+	    b=1;
+	switch(x)
+	{
+		case 1: printf("31 days"); break;
+		case 2: {
+			        if(b==0)
+			        {
+			        	printf("29 days");
+					}
+					else
+					   printf("28 days");
+		        	break;
+	           	}
+	    case 3: printf("31 days"); break;
+	    case 4: printf("30 days"); break;
+	    case 5: printf("31 days"); break;
+	    case 6: printf("30 days"); break;
+	    case 7: printf("31 days"); break;
+	    case 8: printf("31 days"); break;
+	    case 9: printf("30 days"); break;
+	    case 10: printf("31 days"); break;
+	    case 11: printf("30 days"); break;
+	    case 12: printf("31 days"); break;
+	    
+	}
+    return 0;
+}
