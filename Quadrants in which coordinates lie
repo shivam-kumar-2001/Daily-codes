@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int x,y;
+	printf("enter coordinate ");
+	scanf("%d %d",&x,&y);
+	switch(1)
+	{
+		case 1: if(x>=0 && y>=0)
+		        {
+		        	printf("1st Quadrant"); break;
+				}  
+		case 2: if(x<0 && y>=0)
+		         {
+		         	printf("2nd Qudrant"); break;
+						 }		
+						 
+	    case 3: if(x<0 && y<0)
+	            {
+	            	printf("3rd Quadrant");  break;
+				}
+		case 4:  if(x>=0 && y <0)
+		          {
+		          	printf("4th Quadrant");  break;
+				  }
+	}
+	return 0;
+}
