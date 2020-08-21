@@ -1,0 +1,55 @@
+#include<stdio.h>
+void sort(int arr[],int size)
+{
+    int i,j,temp;
+    for(i=0;i<size;i++)
+    {
+        for(j=i+1;j<size;j++)
+        if(arr[i]>=arr[j])
+        {
+         temp=arr[i];
+         arr[i]=arr[j];
+         arr[j]=temp;
+        }}
+}
+
+void Find_mean(int arr[],int size)
+{
+    int sum=0,i;
+    for(i=0;i<size;i++)
+    {
+        sum+=arr[i];
+    }
+    double mean=(double)sum/(double)size;
+    printf("Mean = %0.2lf\n",mean);
+}
+
+void Find_median(int arr[],int size)
+{
+    sort(arr,size);
+    if(size%2==1)
+    {
+    double median=arr[size/2];
+   printf("Median= %0.2lf",median);
+	}
+   else
+   {
+       double median=(arr[size/2]+(arr[(size/2)-1]))/2.0;
+	printf("Median= %0.2lf\n",median);
+	}
+}
+int main()
+{
+    printf("Enter the size of the array:");
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    int i,j;
+    printf("Enter the Element of the array:\n");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    Find_mean(arr,size);
+    Find_median(arr,size);
+}
