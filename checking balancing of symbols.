@@ -1,0 +1,75 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+bool areParanthesisBalanced(string expr) 
+{ 
+	stack<char> s;
+	char x;
+	int l=0,i;
+	for( i=0;i<expr.length();i++)
+	{  
+		if(expr[i] == '(' || expr[i] == '[' || expr[i] == '{' || 
+		expr[i] == ')' || expr[i] == ']' || expr[i] == '}')
+		 { l++;
+		  if(expr[i] == '(' || expr[i] == '[' || expr[i] == '{')
+		   {
+			s.push(expr[i]); 
+            continue;
+		   }
+	      if(s.empty()) 
+	      {
+	      	cout<<"empty error"<<endl;
+	      	return false;
+	      }  
+	      if(l%2!=0 && i==expr.length()-1)
+          { cout<<"odd error"<<endl;
+        	return false;
+        	break;
+          }  
+        switch(expr[i]) 
+        { 
+        case ')': { x = s.top(); 
+                   s.pop(); 
+                  if(x == '(')  
+                  {
+                  	continue;
+                  } 
+                  else
+                  	cout<<") error"<<endl;
+                  	return false;
+                    break;
+            }
+        case '}':{ x = s.top(); 
+                   s.pop(); 
+             if(x=='{')
+                  {
+                  	continue;
+                  } 
+                  else
+                  	cout<<"} error"<<endl;
+                  	return false;
+                    break;
+           }
+        case ']': { 
+                   x = s.top(); 
+                   s.pop();
+                   if(x=='[')
+                  {
+                  	continue;
+                  } 
+                  else
+                  	cout<<"] error"<<endl;
+                  	return false;
+                    break;
+            }
+        } }
+	}
+} 
+int main() 
+{ 
+	string expr = "((a+b)+[c-d]}"; 
+	if (areParanthesisBalanced(expr)) 
+		cout << "Balanced"; 
+	else
+		cout << "Not Balanced"; 
+	return 0; 
+} 
