@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cmath> 
+using namespace std; 
+int main()
+{ 
+    int a,i=0,n;
+    cin>>a;
+    for(int j=0;j<a;j++)
+    {
+	   cin>>n;
+	   cout<<n<<" ";	 
+       for(i=0;n>1;i++)
+       {
+       	if(n%2==0)
+       	{
+       		n=sqrt(n);
+       		cout<<n<<" ";
+		}
+		else
+		{
+			n=sqrt(n)*sqrt(n)*sqrt(n);
+			cout<<n<<" ";
+		}
+	   } cout<<endl;
+   }
+     return 0; 
+}
