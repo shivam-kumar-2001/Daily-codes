@@ -1,0 +1,34 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std; 
+int main() 
+{ 
+  std::vector<int> prices{6,1,3,2,4,7};
+   int n = prices.size();
+          int profit;
+        if( n == 0 ) {
+            profit = 0;            
+        }
+
+         profit = 0;
+        int buy = prices[0];
+        int sell = 0;
+        
+        for( int i = 1 ; i < n ; i++ ) {
+            
+            if( prices[i] < prices[i-1] ) {
+                sell = prices[i-1];
+                profit += (sell-buy);
+                buy = prices[i];
+            }
+            
+        }
+        sell = prices[n-1];
+        profit += (sell-buy);
+         cout<<profit;
+         return 0;
+    }
