@@ -35,3 +35,40 @@ int main()
         cout<<length;
 	return 0;
 }
+
+
+
+
+
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int l=0,i,j;
+	std::vector<int> nums={0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+	int n=nums.size();
+  if (n == 0) {
+      return 0;
+  }
+  int writePointer = 1;
+  for (int readPointer = 1; readPointer <n; readPointer++) {
+      if (nums[readPointer] != nums[readPointer - 1]) {
+          nums[writePointer] = nums[readPointer];
+          writePointer++;
+      }
+  }
+  for(i=0;i<writePointer;i++)
+  {
+  	cout<<nums[i]<<" ";
+  }
+  
+   cout<<writePointer;
+	return 0;
+}
+
