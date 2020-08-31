@@ -1,0 +1,25 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+   vector<int> arr={7,1,14,11};
+   int l=0;
+     for(int i=0;i<arr.size() && l!=1;i++)
+     { 
+     	for(int j=0;j<arr.size();j++)
+     	{
+     		if(arr[j]==arr[i]*2 && i!=j)
+     		{
+     			l=1;
+     			break;
+     		}
+     	}
+     } cout<<l;
+    return 0;
+}
