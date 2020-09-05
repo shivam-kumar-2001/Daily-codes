@@ -1,0 +1,36 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	std::vector<int> arr={16, 17, 4, 3, 5, 2};
+	int i,j,k,l=0,x;
+	for(i=0;i<arr.size()-1;i++)
+	{ l=0;
+		for(j=i+1;j<arr.size();j++)
+		{
+			if(l<arr[j])
+			{
+				l=arr[j];
+                x=j;
+			}
+		}
+		for(k=i;k<x;k++)
+		{
+			arr[k]=l;
+		}
+		i=x-1;
+		arr[x]=0;
+	}
+    arr[arr.size()-1]=-1;
+	for(i=0;i<arr.size();i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	return 0;
+}
